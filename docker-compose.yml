@@ -1,4 +1,13 @@
 version: "2"
 services:
   publish:
+    #image: node:6
     build: .
+    env_file:
+      - docker.env
+    volumes:
+      - ./publish-functions.sh:/publish-functions.sh
+      - publish-data:/opt/work
+
+volumes:
+  publish-data:

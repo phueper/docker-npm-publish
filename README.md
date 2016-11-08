@@ -1,3 +1,9 @@
+# docker setup to `npm publish` modules from a clean checkout environment
+
+since i published "dirty" npm modules that contain files in my checkout that shouldn't be in the module,
+i created this... i try to be repository/module agnostic, but it is pretty much created for the js-joda
+Release workflow :)
+
 # TODO
 
 - verify checkout is clean!

@@ -2,9 +2,8 @@ FROM node:6
 
 MAINTAINER phueper@hueper.net
 
-COPY publish-functions.sh /
-
-WORKDIR /opt/js-joda
-
-RUN git clone https://github.com/js-joda/js-joda.git .
-RUN ls -la
+# hm... do we need an extra dockerfile? all i really want is a common WORKDIR,
+# which doesn't seem possible from docker-compose file
+WORKDIR /opt/work
+# this is just for convenience... and to make it "harder" to run anything but npm commands in the container :)
+ENTRYPOINT npm
